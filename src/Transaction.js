@@ -4,8 +4,7 @@
         this.amount = amount;
         this.current_balance = current_balance;
         this.date = date;
-      }
+    }
 
-
-      exports.Transaction = Transaction;
+    exports.Transaction = Transaction;
 })(this);
