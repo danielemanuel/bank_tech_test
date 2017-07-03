@@ -20,4 +20,29 @@ describe('BankAccount', function() {
     it('should have a statement', function() {
         expect(bankAccount.statement).toBeDefined();
     });
+
+    describe('#deposit', function() {
+
+        beforeEach(function() {
+            spyOn(bankStatement, 'addTransaction');
+        });
+
+        it('should increase the balance', function() {
+            bankAccount.deposit(100.00);
+            expect(bankAccount.balance).toEqual(100.00);
+        });
+    });
+
+    describe('#withdraw', function() {
+
+        beforeEach(function() {
+            spyOn(bankStatement, 'addTransaction');
+        });
+
+        it('should decrease the balance', function() {
+            bankAccount.deposit(100.00);
+            bankAccount.withdraw(10);
+            expect(bankAccount.balance).toEqual(90.00)
+        })
+    });
 });
