@@ -36,6 +36,11 @@ describe('BankAccount', function() {
             bankAccount.withdraw(10);
             expect(bankAccount.balance).toEqual(90.00);
         });
+
+        it('throws an error if withdraw more than the initial balance', function() {
+          bankAccount.deposit(100.00);
+          expect(function(){bankAccount.withdraw(110.00); }).toThrowError("Inssuficient credit!");
+        })
     });
 
     describe('#viewStatement', function() {
