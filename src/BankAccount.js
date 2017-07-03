@@ -5,9 +5,11 @@
       this.statement = statement;
     };
 
-    BankAccount.prototype.deposit = (amount) => {
+    BankAccount.prototype =  {
+    deposit: function(amount){
       this.balance =+ amount;
       this.statement.addTransaction(amount, this.balance);
+  }
     };
 
     exports.BankAccount = BankAccount;
