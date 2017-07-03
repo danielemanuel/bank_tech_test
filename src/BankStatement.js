@@ -4,11 +4,9 @@
       this.history = history;
     };
 
-    BankStatement.prototype = {
-        addTransaction: function(amount, balance){
+    BankStatement.prototype.addTransaction = function(amount, balance){
         this.history.addTransaction(amount, balance);
     }
-};
 
     exports.BankStatement = BankStatement;
 })(this);

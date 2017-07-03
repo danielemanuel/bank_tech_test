@@ -5,12 +5,16 @@
       this.statement = statement;
     };
 
-    BankAccount.prototype =  {
-    deposit: function(amount){
+    BankAccount.prototype.deposit = function(amount) {
       this.balance =+ amount;
       this.statement.addTransaction(amount, this.balance);
   }
-    };
+
+    BankAccount.prototype.withdraw = function(amount) {
+      this.balance -= amount;
+      this.statement.addTransaction(-amount, this.balance);
+    }
+
 
     exports.BankAccount = BankAccount;
 })(this);
