@@ -23,10 +23,6 @@ describe('BankAccount', function() {
 
     describe('#deposit', function() {
 
-        beforeEach(function() {
-            spyOn(bankStatement, 'addTransaction');
-        });
-
         it('should increase the balance', function() {
             bankAccount.deposit(100.00);
             expect(bankAccount.balance).toEqual(100.00);
@@ -35,14 +31,17 @@ describe('BankAccount', function() {
 
     describe('#withdraw', function() {
 
-        beforeEach(function() {
-            spyOn(bankStatement, 'addTransaction');
-        });
-
         it('should decrease the balance', function() {
             bankAccount.deposit(100.00);
             bankAccount.withdraw(10);
-            expect(bankAccount.balance).toEqual(90.00)
-        })
+            expect(bankAccount.balance).toEqual(90.00);
+        });
+    });
+
+    describe('#viewStatement', function() {
+
+        it('return a string', function() {
+            expect(typeof bankAccount.viewStatement()).toBe('string');
+        });
     });
 });
