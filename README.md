@@ -32,7 +32,7 @@ I would like to see a statement of all my transactions.
 
 * Before creating each object I added a TransactionSpec.js, BankAccountSpec.js,TransactioHistorySpec and BankStatementSpecFiel.js files that were testing if the objects exists.
 * After creating the first test I started implementing the features meaning starting writing the methods
-* I created a bankAccount class with a deposit and withdraw methods with the ability to print the statement as well
+* I created a bankAccount class with a deposit and withdraw methods and a view statement method  which prints the statement
 * The Transaction class holds the amount properties and date time of the transactions
 * The TransactionHistory class has transactions as properties which are stored as an array of objects
 * The BankStatement class has as property the transactionHistory object
