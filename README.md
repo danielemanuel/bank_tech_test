@@ -26,7 +26,7 @@ I would like to see a statement of all my transactions.
 
 ### Below is the domain model for my bank programe develped before implementation:
 
-![Domain model](screenshots/domain-model.png)
+![Domain model](screenshots/domain-model_.png)
 
 ## Process
 
