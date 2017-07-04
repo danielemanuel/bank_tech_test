@@ -28,12 +28,3 @@
 
   exports.BankAccount = BankAccount;
 })(this);
-
-// b = new BankAccount();
-// b.deposit(100);
-// b.withdraw(20);
-// b.deposit(120);
-// b.deposit(110);
-// b.deposit(1110);
-// b.withdraw(500)
-// b.viewStatement();
