@@ -24,7 +24,7 @@ So I can keep track of my bank balance
 I would like to see a statement of all my transactions.
 
 
-### Below is the domain model for my bank programe develped before implementation:
+### Below is the domain model for my bank programe developed before implementation:
 
 ![Domain model](screenshots/domain-model_.png)
 
